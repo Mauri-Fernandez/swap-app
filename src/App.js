@@ -1,25 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+// install "react-router-dom" with the following command --> npm install react-router-dom
+// install "react icons" with the following command --> npm install react-icons --save
 
-function App() {
+import './App.css';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+
+/* Start [MRF 2021-08-10]  components import */
+import NavBar       from './components/NavBar';
+/* End   [MRF 2021-08-10]  components import */
+
+/* Start [MRF 2021-08-10] pages import */
+import Home         from './pages/Home';
+import Exchange     from './pages/Exchange';
+import Pools        from './pages/Pools';
+import Collectibles from './pages/Collectibles';
+import More         from './pages/More';
+/* End   [MRF 2021-08-10] pages import */
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <NavBar/>
+      <Switch>
+        <Route path ='/' exact        component = { Home } />
+        <Route path ='/exchange'      component = { Exchange } />
+        <Route path ='/pools'         component = { Pools } />
+        <Route path ='/collectibles'  component = { Collectibles } />
+        <Route path ='/more'          component = { More } />
+      </Switch>
+    </Router>
   );
 }
-
 export default App;
