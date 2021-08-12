@@ -4,9 +4,10 @@
 import './App.css';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
-/* Start [MRF 2021-08-10]  components import */
-import NavBar       from './components/NavBar';
-/* End   [MRF 2021-08-10]  components import */
+/* Start [MRF 2021-08-10] components import */
+import NavBar            from './components/NavBar/NavBar';
+import ItemListContainer from './components/ItemListContainer/ItemListContainer';
+/* End   [MRF 2021-08-10] components import */
 
 /* Start [MRF 2021-08-10] pages import */
 import Home         from './pages/Home';
@@ -20,6 +21,7 @@ const App = () => {
   return (
     <Router>
       <NavBar/>
+      <ItemListContainer greeting={'Saludar'}/>
       <Switch>
         <Route path ='/' exact        component = { Home } />
         <Route path ='/exchange'      component = { Exchange } />

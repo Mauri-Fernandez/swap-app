@@ -3,7 +3,9 @@
     margin:0;
     padding:0;
     box-sizing:border-box;
+    font-family: 'Lato', sans-serif;
 }
+
 /* End   [2021-08-10] - global styles */
 
 /* Start [2021-08-10] - Nav bar styles */
@@ -14,7 +16,7 @@
     border-bottom: 2px solid rgba(133, 133, 133, 0.1);
     height: 80px;
     display: flex;
-    justify-content: start;
+    justify-content: space-between;
     align-items: center;
 }
 
