@@ -15,15 +15,15 @@ export const SidebarData = [
         cName: 'nav-text'
     },
     {
-        title:'Exchange',
-        path:'/exchange',
-        icon:<FaIcons.FaExchangeAlt/>,
+        title:'Marketplace',
+        path:'/marketplace',
+        icon:<GiIcons.GiHeartBottle/>,
         cName: 'nav-text'
     },
     {
-        title:'Pools',
-        path:'/pools',
-        icon:<GiIcons.GiHeartBottle/>,
+        title:'Arena',
+        path:'/arena',
+        icon:<GiIcons.GiAxeSword/>,
         cName: 'nav-text'
     },
     {
