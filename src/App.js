@@ -11,8 +11,8 @@ import ItemListContainer from './components/ItemListContainer/ItemListContainer'
 
 /* Start [MRF 2021-08-10] pages import */
 import Home         from './pages/Home';
-import Exchange     from './pages/Exchange';
-import Pools        from './pages/Pools';
+import Marketplace     from './pages/Marketplace';
+import Arena        from './pages/Arena';
 import Collectibles from './pages/Collectibles';
 import More         from './pages/More';
 /* End   [MRF 2021-08-10] pages import */
@@ -21,11 +21,11 @@ const App = () => {
   return (
     <Router>
       <NavBar/>
-      <ItemListContainer greeting={'Saludar'}/>
+      {/* <ItemListContainer greeting={'Saludar'}/> */}
       <Switch>
         <Route path ='/' exact        component = { Home } />
-        <Route path ='/exchange'      component = { Exchange } />
-        <Route path ='/pools'         component = { Pools } />
+        <Route path ='/marketplace'      component = { Marketplace } />
+        <Route path ='/Arena'         component = { Arena } />
         <Route path ='/collectibles'  component = { Collectibles } />
         <Route path ='/more'          component = { More } />
       </Switch>
