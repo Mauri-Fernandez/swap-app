@@ -14,10 +14,11 @@
 .more {
   display:flex;
   flex-wrap: wrap;
-  height: 90vh;
   align-items: center;
   justify-content: center;
+  margin: 0px auto;
   font-size: 3rem;
+  width: 800px;
 }
 
 .marketplace h1{

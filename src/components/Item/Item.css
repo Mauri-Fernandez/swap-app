@@ -1,0 +1,27 @@
+.item-container {
+    width: 100%;
+    display:flex; /* change this to grid */
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.card-item {
+    width: 400px;
+    display:flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: 7px;
+    border:1px solid dodgerblue;
+}
+
+.card-item div {
+    width: 100%;
+}
+
+.card-item img {
+    width: 300px;
+}
