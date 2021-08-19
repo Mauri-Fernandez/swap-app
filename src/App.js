@@ -6,7 +6,6 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 /* Start [MRF 2021-08-10] components import */
 import NavBar            from './components/NavBar/NavBar';
-import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 /* End   [MRF 2021-08-10] components import */
 
 /* Start [MRF 2021-08-10] pages import */
@@ -21,7 +20,6 @@ const App = () => {
   return (
     <Router>
       <NavBar/>
-      {/* <ItemListContainer greeting={'Saludar'}/> */}
       <Switch>
         <Route path ='/' exact        component = { Home } />
         <Route path ='/marketplace'      component = { Marketplace } />

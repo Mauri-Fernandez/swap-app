@@ -2,10 +2,12 @@ import React , {useState, useReducer} from 'react';
 import './ItemCount.css';
 import swal from 'sweetalert';
 
-const ItemCount = ({ stock, initial }) => {
+const ItemCount = ({ stock, initial , select}) => {
 
+  console.log("data: " + select);
   const initialState = {count: initial};
   const stockState = {count: stock};
+  const selectState = {name: select};
   const reducer = (state, action) =>  {
     switch (action.type) {
       case 'increment':
@@ -18,7 +20,8 @@ const ItemCount = ({ stock, initial }) => {
   }
   const [state, dispatch] = useReducer(reducer, initialState);
   const buy = () => {
-    state.count > 0 ? swal("Bien!", state.count + " ... comprado con éxito!", "success") : swal("Ops!", "Selecciona una cantidad para comprar!", "error");
+    let message = state.count > 1 ? " comprados con éxito!" : " comprado con éxito!";
+    state.count > 0 ? swal("Bien!", state.count + " " + selectState.name + message , "success") : swal("Ops!", "Selecciona una cantidad para comprar!", "error");
   }
   return (
     <div>

@@ -2,7 +2,7 @@
 .item-count-container{
     display: flex;
     flex-wrap: wrap;
-    width: 100%;
+    width: 400px;
     border:1px solid dodgerblue;
     padding: 0.5rem;
     border-radius: 7px;
