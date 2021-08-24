@@ -1,0 +1,17 @@
+.itemDetail {
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 390px;
+    padding: 0.5rem;
+    border-radius: 7px;
+}
+
+.itemDetail img {
+    width: 300px;
+}
+
+.itemDetail h1 {
+
+    font-size: 2rem;
+}

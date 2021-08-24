@@ -1,12 +1,14 @@
 import React , {useState, useEffect} from 'react';
 import Item  from '../Item/Item';
+import axios from 'axios';
+import Spinner from '../Spinner/Spinner';
 
 const ItemList = () => {
     const [characters, setCharacters] = useState([]);
-    const [show, setShow] = useState(false);
+    const [isLoading, setIsLoading] = useState(true);
     const delay = 2;
     useEffect(() => {
-        let timer = setTimeout(() => setShow(true), delay * 1000); // 2 seconds time out
+        let timer = setTimeout(() => setIsLoading(false), delay * 1000); // 2 seconds time out
         fetch('https://api.github.com/users')
         .then(response => response.json())
         .then(data     => setCharacters(data)); 
@@ -14,11 +16,14 @@ const ItemList = () => {
             clearTimeout( timer );
           };
     },[]);
+    //
     return (
         <div>
+           
             {
+                isLoading ? <Spinner /> : 
                 characters.map(( user ) => {
-                return show ? <Item key = { user.id } data = { user }/> : <div></div>;
+                return <Item key = { user.id } data = { user }/>;
                 })
             }
         </div>
