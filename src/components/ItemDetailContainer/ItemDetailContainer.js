@@ -1,12 +1,15 @@
 import React from 'react';
-import './ItemDetailContainer.css';
-import ItemDetail from '../ItemDetail/ItemDetail';
+import { useParams } from 'react-router';
+import ItemDetail from '../ItemDetail/ItemDetail'
 
-
-function ItemDetailContainer({ data }) {
+const ItemDetailContainer = () => {
+    const { id }  = useParams();
+    console.log("id: " + JSON.stringify(useParams()));
+    // fetch de persona por id
   return (
-    <div className='itemDetailContainer'>
-      <ItemDetail data = { data }/>
+    <div className='detail'>
+      <h1>Detail test { id } </h1>
+      <ItemDetail/>
     </div>
   );
 }

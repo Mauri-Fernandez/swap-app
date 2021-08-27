@@ -4,11 +4,10 @@ import './ItemDetail.css';
 
 // incluir descripcion , foto y precio //
 
-function ItemDetail( { data } ) {
+function ItemDetail( ) {
   return (
     <div className='itemDetail'>
-      <img src= { data.avatar_url }></img>
-      <h1>{ data.login }</h1>
+      <h1>detalle del producto</h1>
     </div>
   );
 }

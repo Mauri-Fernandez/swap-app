@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 /* Start [MRF 2021-08-10] components import */
 import NavBar            from './components/NavBar/NavBar';
+import ItemDetailContainer  from './components/ItemDetailContainer/ItemDetailContainer';
 /* End   [MRF 2021-08-10] components import */
 
 /* Start [MRF 2021-08-10] pages import */
@@ -22,10 +23,11 @@ const App = () => {
       <NavBar/>
       <Switch>
         <Route path ='/' exact        component = { Home } />
-        <Route path ='/marketplace'      component = { Marketplace } />
+        <Route path ='/marketplace'   component = { Marketplace } />
         <Route path ='/Arena'         component = { Arena } />
         <Route path ='/collectibles'  component = { Collectibles } />
         <Route path ='/more'          component = { More } />
+        <Route path ='/detail'        component = { ItemDetailContainer } />
       </Switch>
     </Router>
   );
